@@ -38,6 +38,12 @@ public:
             else if (sum < k){
                 st++;
             }
+            else if (ans[st] == k){
+                return true;
+            }
+            else if(ans[end] == k){
+                return true;
+            }
             else {
                 return true;
             }
