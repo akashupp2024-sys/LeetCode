@@ -29,8 +29,8 @@ public:
         solve(root);
         int st = 0, end = ans.size() - 1, sum = 0;
 
-        while(st <= end){
-            sum = sum + ans[st] + ans[end];
+        while(st < end){
+            sum = ans[st] + ans[end];
 
             if(sum > k){
                 end--;
