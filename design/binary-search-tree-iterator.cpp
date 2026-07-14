@@ -43,7 +43,7 @@ public:
     
     bool hasNext() {
 
-        return index + 1 < Inorder.size()-1;
+        return index + 1 < Inorder.size();
         
     }
 };
