@@ -13,21 +13,22 @@ class BSTIterator {
 public:
 
     vector<int> Inorder;
+    int index;
     void solve(TreeNode* root){
         if(root == NULL){
             return ;
         }
         solve(root->left);
-        Inorder.push_back(root);
+        Inorder.push_back(root-> val);
         solve(root->right);
 
     }
 
     BSTIterator(TreeNode* root) {
 
-        
-        int index = -1;
         solve(root);
+        index = -1;
+        
 
 
         
@@ -42,7 +43,7 @@ public:
     
     bool hasNext() {
 
-        return Inorder[index + 1] < vector.size();
+        return index + 1 < Inorder.size()-1;
         
     }
 };
