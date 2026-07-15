@@ -14,7 +14,7 @@ public:
             s.push(i % n);
         }
 
-        return ans
+        return ans;
 
         
     }
