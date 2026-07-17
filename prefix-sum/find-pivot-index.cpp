@@ -17,7 +17,7 @@ public:
                 return i;
             }
 
-            leftsum = leftsum + nums[i]
+            leftsum = leftsum + nums[i];
         }
 
         return -1;
