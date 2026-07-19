@@ -6,7 +6,7 @@ public:
         int maxsum = 0;
 
         for(int i = 0; i< nums.size(); i++){
-            currsum = surrsum + nums[i];
+            currsum = currsum + nums[i];
             maxsum = max(currsum, maxsum);
 
             if(currsum < 0){
