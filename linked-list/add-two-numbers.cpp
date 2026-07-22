@@ -30,7 +30,7 @@ public:
         }
 
         if(carry){
-            ListNode*newNode = newNode(carry);
+            ListNode*newNode = new ListNode(carry);
             curr->next = newNode;
         }
 
