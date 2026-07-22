@@ -18,9 +18,9 @@ public:
         int carry = 0;
         while(temp1 != NULL || temp2 != NULL){
             int sum = carry;
-            if(temp1) sum = sum + temp1;
-            if(temp2) sum = sum + temp2;
-            ListNode* newNode = new Node(sum % 10);
+            if(temp1) sum = sum + temp1->val;
+            if(temp2) sum = sum + temp2->val;
+            ListNode* newNode = new ListNode(sum % 10);
             carry = sum / 10;
             curr->next = newNode;
             curr = curr->next;
