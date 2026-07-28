@@ -14,7 +14,7 @@ public:
             }
         }
         vector<int> ans;
-        int j= , k = ;
+        int j=0 , k=0  ;
         while(j < arr1.size() && k < arr2.size()){
             ans.push_back(arr1[j]);
             ans.push_back(arr2[k]);
