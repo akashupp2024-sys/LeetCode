@@ -14,10 +14,10 @@ public:
             }
         }
         vector<int> ans;
-        int j= 0, k = 0;
+        int j= , k = ;
         while(j < arr1.size() && k < arr2.size()){
             ans.push_back(arr1[j]);
-            ans.psuh_back(arr2[k]);
+            ans.push_back(arr2[k]);
             j++;
             k++;
         }
