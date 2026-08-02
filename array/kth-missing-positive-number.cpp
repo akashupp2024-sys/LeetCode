@@ -6,9 +6,9 @@ public:
             if(num < k){
                 k++;
             }
-            // else {
-            //     break;
-            // }
+            else {
+                break;
+            }
         }
 
         return k;
