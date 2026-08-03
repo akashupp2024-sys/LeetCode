@@ -4,7 +4,7 @@ public:
         int time = 0;
         int target = tickets[k];
 
-        for(int i = 0; i< ticket.size(); i++){
+        for(int i = 0; i< tickets.size(); i++){
             if(i <= k){
                 time += min(tickets[i], target);
             }
