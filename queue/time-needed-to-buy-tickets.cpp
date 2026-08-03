@@ -2,7 +2,7 @@ class Solution {
 public:
     int timeRequiredToBuy(vector<int>& tickets, int k) {
         int time = 0;
-        int target = ticket[i];
+        int target = tickets[i];
 
         for(int i = 0; i< ticket.size(); i++){
             if(i <= k){
