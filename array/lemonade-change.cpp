@@ -11,7 +11,7 @@ public:
             }
             else if(i == 10)
             ten++, five--;
-            else if(10 > 0)
+            else if(ten > 0)
             ten--, five--;
             else five -= 3;
             if(five < 0){
