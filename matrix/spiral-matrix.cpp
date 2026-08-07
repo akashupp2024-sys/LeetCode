@@ -21,7 +21,7 @@ public:
             right--;
 
             while(top <= buttom){
-                for(int j = right; i>= left; j--){
+                for(int j = right; j>= left; j--){
                     ans.push_back(matrix[buttom][j]);
                 }
                 buttom--;
