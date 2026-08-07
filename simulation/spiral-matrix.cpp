@@ -27,7 +27,7 @@ public:
                 buttom--;
             }
 
-            if(right <= left){
+            if(left <= right){
                 for(int i = buttom; i>= top; i--){
                     ans.push_back(matrix[i][left]);
                 }
