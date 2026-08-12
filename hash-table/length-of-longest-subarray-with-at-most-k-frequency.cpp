@@ -9,7 +9,7 @@ public:
 
             while(freq[nums[left]] > k){
                 freq[nums[left]]--;
-                // left++;
+                left++;
             }
 
             ans = max(ans, right-left+1);
