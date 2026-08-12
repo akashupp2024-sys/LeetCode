@@ -7,7 +7,7 @@ public:
         for(int right = 0; right<nums.size(); right++){
             freq[nums[right]]++;
 
-            while(freq[nums[left]] > k){
+            while(freq[nums[right]] > k){
                 freq[nums[left]]--;
                 left++;
             }
