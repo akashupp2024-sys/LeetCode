@@ -24,9 +24,12 @@ public:
 
             if (curr == k) {
 
-                while (s < e && nums[s] == 0) {
+                int temp = s;
+                int zeros = 0;
+
+                while (temp <= e && nums[temp] == 0) {
                     zeros++;
-                    s++;
+                    temp++;
                 }
 
                 count += zeros + 1;
