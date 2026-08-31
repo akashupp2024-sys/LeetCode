@@ -29,7 +29,7 @@ public:
             if (x == candidate1) {
                 count1++;
             }
-            if (x == candidate2) {
+            else if (x == candidate2) {
                 count2++;
             }
         }
