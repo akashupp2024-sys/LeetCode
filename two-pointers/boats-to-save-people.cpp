@@ -21,6 +21,7 @@ public:
         int i = 0;
         int j = people.size() - 1;
         int res = 0;
+        sort(people.begin(), people.end());
 
         while(i <= j){
             int sum = people[i] + people[j];
@@ -30,7 +31,7 @@ public:
                 j--;
             }
             else {
-                i++;
+                j--;
                 res++;
             }
         }
