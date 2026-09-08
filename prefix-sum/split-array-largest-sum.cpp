@@ -2,31 +2,32 @@ class Solution {
 public:
     int splitArray(vector<int>& nums, int k) {
        int n = nums.size();
-        int res = INT_MAX;
+       int low = *max_element(nums.begin(), nums.end());
+       int high = accumulate(nums.begin(), nums.end(), 0);
 
-        // Try every possible split position
-        for(int j = 0; j < n - 1; j++) {
+       while(low <= high){
+        int mid = low + (high-low)/2;
+        int parts = 1;
+        int currsum = 0;
 
-            int sum1 = 0;
-            int sum2 = 0;
-
-            // First part: 0 to j
-            for(int i = 0; i <= j; i++) {
-                sum1 += nums[i];
+        for(int x : nums){
+            if(currsum + x > mid){
+                currsum = 0;
+                parts++;
             }
-
-            // Second part: j+1 to n-1
-            for(int i = j + 1; i < n; i++) {
-                sum2 += nums[i];
-            }
-
-            // Largest sum among the two parts
-            int largest = max(sum1, sum2);
-
-            // Minimum among all possible splits
-            res = min(res, largest);
+            currsum += x;
         }
 
-        return res;
+        if(parts <= k){
+            high = mid - 1;
+        }
+
+        else {
+            low = mid +1;
+        }
+
+       }
+
+       return low;
     }
 };
