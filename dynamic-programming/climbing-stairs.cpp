@@ -1,14 +1,30 @@
 class Solution {
 public:
 
-    int climbrec(int n){
+    int climbmemo(int n, vector<int> & dp){
         if(n <= 2){
             return n;
         }
 
-        return climbrec(n-1) + climbrec(n-2);
+        if(dp[n] != -1){
+            return dp[n];
+        }
+
+        dp[n] = climbmemo(n-1, dp) + climbmemo(n-2, dp);
+        return dp[n];
+
+        
 
     }
+
+    // int climbrec(int n){
+    //     if(n <= 2){
+    //         return n;
+    //     }
+
+    //     return climbrec(n-1) + climbrec(n-2);
+
+    // }
     int climbStairs(int n) {
         // if(n <= 2)
         // return n;
@@ -23,7 +39,11 @@ public:
         // }
         // return b;
 
-        return climbrec(n); 
+        // return climbrec(n); 
+
+        vector<int> dp(n+1, -1);
+
+        return climbmemo(n, dp);
         
     }
 
