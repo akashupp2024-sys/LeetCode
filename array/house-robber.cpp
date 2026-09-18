@@ -1,17 +1,28 @@
 class Solution {
 public:
-    int rob(vector<int>& nums) {
-        int sum1 = 0, sum2 = 0;
-        for(int i = 0; i< nums.size(); i++){
-            if(i % 2 == 0){
-                sum1 += nums[i];
-            }
-            else {
-                sum2 += nums[i];
-            }
+    int solvemem(vector<int>& nums, int i, vector<int>& dp){
+
+        if(i >= nums.size()){
+            return 0; 
         }
-        int maxsum = max(sum1, sum2);
-        return maxsum;
+
+        if(dp[i] != -1){
+            return dp[i];
+        }
+
+        int include = nums[i] + solvemem(nums, i+2, dp);
+        int exclude = 0 + solvemem(nums, i+1, dp);
+
+        dp[i] = max(include, exclude);
+
+        return dp[i];
+    }
+    int rob(vector<int>& nums) {
+        //int n = nums.size();
+        vector<int>dp(nums.size(), -1);
+
+        return solvemem(nums, 0, dp);
+        
         
     }
 };
